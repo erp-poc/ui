@@ -1,0 +1,15 @@
+server:
+  port: 9000
+  
+spring:
+  boot:
+    admin:
+      url: http://localhost:8081
+  application:
+    name: UI
+
+zuul:
+  routes:
+    core:
+      path: /core/**
+      url: http://localhost:8080/

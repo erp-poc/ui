@@ -1,0 +1,15 @@
+Contacts Form 
+
+
+<form>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input ng-model="contactFormController.contact.name" type="text" class="form-control" id="name" placeholder="Name">
+  </div>
+  <div class="form-group">
+    <label for="email">Email address</label>
+    <input ng-model="contactFormController.contact.email" type="email" class="form-control" id="email" placeholder="Email">
+  </div>
+  <button type="submit" class="btn btn-default" ng-click="contactFormController.save()">Submit</button>
+</form>
+
