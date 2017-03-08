@@ -11,20 +11,32 @@
             });
     	}
     	
-    	function get(url) {
+    	function get(id) {
             return $http({
                 method: 'GET',
-                url: url
+                url: 'core/contacts/'+id
             });
     	}    	
     	
     	function save(contact) {
     		
-            return $http({
-                method: 'POST',
-                url: 'core/contacts/',
-                data: contact
-            });
+    		if(contact.id){
+    			
+                return $http({
+                    method: 'PUT',
+                    url: 'core/contacts/'+contact.id,
+                    data: contact
+                });
+                
+    		} else {
+    			
+                return $http({
+                    method: 'POST',
+                    url: 'core/contacts/',
+                    data: contact
+                });	
+                
+    		}
             
         }
 

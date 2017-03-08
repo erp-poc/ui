@@ -12,6 +12,13 @@
     	
     	self.init = function(){
     		
+    		if(self.id){
+    			contactsService.get(self.id).success(function(response){
+    				self.contact = response;
+    				self.contact.id = self.id;
+    			});
+    		}
+    		
     	}
     	
     	self.init();

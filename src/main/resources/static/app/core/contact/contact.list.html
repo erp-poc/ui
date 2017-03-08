@@ -1,4 +1,4 @@
 
-<p ng-repeat="contact in contactListController.page._embedded.contacts">{{contact.name}}  <a href="{{contact._links.self.href}}" >Edit</a> </p>
+<p ng-repeat="contact in contactListController.page._embedded.contacts">{{contact.name}}  <a href="{{contactListController.getEditUrl(contact)}}" >Edit</a> </p>
 
 <a href="/#/contacts/new" >New</a>
