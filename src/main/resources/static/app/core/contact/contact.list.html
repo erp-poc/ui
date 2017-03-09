@@ -1,4 +1,18 @@
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Actions</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="contact in contactListController.page._embedded.contacts">
+			<td>{{contact.name}}</td>
+			<td>{{contact.email}}</td>
+			<td><a href="{{contactListController.getEditUrl(contact)}}">Edit</a></td>
+		</tr>
+	</tbody>
+</table>
 
-<p ng-repeat="contact in contactListController.page._embedded.contacts">{{contact.name}}  <a href="{{contactListController.getEditUrl(contact)}}" >Edit</a> </p>
-
-<a href="/#/contacts/new" >New</a>
+<a href="/#/contacts/new">New</a>

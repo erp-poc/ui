@@ -5,8 +5,6 @@
 
     	var self = this;
     	
-    	self.contact = {};
-    	
     	self.id = $routeParams.id;
     	
     	
@@ -17,6 +15,8 @@
     				self.contact = response;
     				self.contact.id = self.id;
     			});
+    		} else {
+    			self.contact = {};
     		}
     		
     	}
