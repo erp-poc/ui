@@ -11,6 +11,12 @@
     		return "/#/contacts/"+id+"/edit";
     	}
     	
+    	self.remove = function(contact){
+    		contactsService.remove(contact).then(function(){
+    			self.init();
+    		});
+    	}
+    	
     	self.init = function (){
     		contactsService.list().success(function(response){
     			self.page = response;

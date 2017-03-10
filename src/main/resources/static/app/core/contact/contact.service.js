@@ -39,11 +39,19 @@
     		}
             
         }
+    	
+    	function remove(contact){
+    		return $http({
+                method: 'DELETE',
+                url: contact._links.self.href
+            });
+    	}
 
         return {
             save: save,
             list: list,
-            get: get
+            get: get,
+            remove: remove
         };
 
     	
