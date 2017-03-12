@@ -20,6 +20,7 @@
 			<li ng-show="authenticated"><a href="#/contacts">Contacts</a></li>
 			<li ng-show="authenticated"><a href="#/products">Products</a></li>
 			<li ng-show="authenticated"><a href="#/services">Services</a></li>
+			<li ng-show="authenticated"><a href="#/sales">Sales</a></li>
 			<li ng-show="authenticated"><a href="" ng-click="nav.logout()">Logout</a></li>
 		</ul>
 	</div>
@@ -46,5 +47,11 @@
 	<script src="app/core/item/service.list.controller.js"></script>
 	<script src="app/core/item/service.form.controller.js"></script>
 	<script src="app/core/item/service.service.js"></script>
+	
+	<!-- Sales -->
+	<script src="app/core/sale/sale.routes.js"></script>
+	<script src="app/core/sale/sale.form.controller.js"></script>
+	<script src="app/core/sale/sale.list.controller.js"></script>
+	
 </body>
 </html>
