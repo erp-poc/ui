@@ -9,6 +9,18 @@
 			controllerAs : 'controller'
 		});
 		
+		$routeProvider.when('/products/new', {
+			templateUrl : 'app/core/item/item.form.html',
+			controller : 'productFormController',
+			controllerAs : 'controller'
+		});
+		
+		$routeProvider.when('/products/:id/edit', {
+			templateUrl : 'app/core/item/item.form.html',
+			controller : 'productFormController',
+			controllerAs : 'controller'
+		});
+		
 		
 	});
 })();

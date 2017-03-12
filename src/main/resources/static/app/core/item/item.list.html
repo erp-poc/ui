@@ -1,3 +1,22 @@
-Item
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Cost</th>
+			<th>Price</th>
+			<th>Description</th>
+			<th>Actions</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="item in controller.page._embedded.products">
+			<td>{{item.name}}</td>
+			<td>{{item.phone}}</td>
+			<td>{{item.mobilePhone}}</td>
+			<td>{{item.email}}</td>
+			<td><a href="{{controller.getEditUrl(item)}}">Edit</a> - <a ng-click="controller.remove(item)">Delete</a></td>
+		</tr>
+	</tbody>
+</table>
 
-dfdsfsdf
+<a href="/#/products/new">New</a>
