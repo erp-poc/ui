@@ -19,6 +19,7 @@
 			<li ng-hide="authenticated" ng-class="{active:nav.tab('navigation')}"><a href="login">Login</a></li>
 			<li ng-show="authenticated"><a href="#/contacts">Contacts</a></li>
 			<li ng-show="authenticated"><a href="#/products">Products</a></li>
+			<li ng-show="authenticated"><a href="#/services">Services</a></li>
 			<li ng-show="authenticated"><a href="" ng-click="nav.logout()">Logout</a></li>
 		</ul>
 	</div>
@@ -41,5 +42,9 @@
 	<script src="app/core/item/product.service.js"></script>
 	<script src="app/core/item/product.list.controller.js"></script>
 	<script src="app/core/item/product.form.controller.js"></script>
+	
+	<script src="app/core/item/service.list.controller.js"></script>
+	<script src="app/core/item/service.form.controller.js"></script>
+	<script src="app/core/item/service.service.js"></script>
 </body>
 </html>

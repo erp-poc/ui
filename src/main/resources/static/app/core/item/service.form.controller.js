@@ -1,24 +1,24 @@
 (function() {
     'use strict';
 
-    angular.module('hello').controller('productFormController', function($rootScope, utils, $http, $location, $route, $routeParams, productsService) {
+    angular.module('hello').controller('serviceFormController', function($rootScope, utils, $http, $location, $route, $routeParams, servicesService) {
 
     	var self = this;
     	
-    	self.type = "products";
+    	self.type = "services";
     	
     	self.id = $routeParams.id;
     	
     	self.save = function(){
-    		productsService.save(self.item).success(function(response){
-    			$location.path('/products/')
+    		servicesService.save(self.item).success(function(response){
+    			$location.path('/services/')
     		});
     	}
     	
     	self.init = function (){
     		
     		if(self.id){
-    			productsService.get(self.id).success(function(response){
+    			servicesService.get(self.id).success(function(response){
     				self.item = response;
     				self.item.id = self.id;
     			});

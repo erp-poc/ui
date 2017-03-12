@@ -5,18 +5,20 @@
 			<th>Cost</th>
 			<th>Price</th>
 			<th>Description</th>
+			<th ng-show="controller.type === 'products'">Quantity</th>
 			<th>Actions</th>
 		</tr>
 	</thead>
 	<tbody>
-		<tr ng-repeat="item in controller.page._embedded.products">
+		<tr ng-repeat="item in controller.getItems()">
 			<td>{{item.name}}</td>
-			<td>{{item.phone}}</td>
-			<td>{{item.mobilePhone}}</td>
-			<td>{{item.email}}</td>
+			<td>{{item.cost}}</td>
+			<td>{{item.price}}</td>
+			<td>{{item.description}}</td>
+			<td ng-show="controller.type === 'products'">{{item.quantity}}</td>
 			<td><a href="{{controller.getEditUrl(item)}}">Edit</a> - <a ng-click="controller.remove(item)">Delete</a></td>
 		</tr>
 	</tbody>
 </table>
 
-<a href="/#/products/new">New</a>
+<a href="/#/{{controller.type}}/new">New</a>

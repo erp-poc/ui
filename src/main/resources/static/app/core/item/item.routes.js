@@ -21,6 +21,23 @@
 			controllerAs : 'controller'
 		});
 		
+		$routeProvider.when('/services/', {
+			templateUrl : 'app/core/item/item.list.html',
+			controller : 'serviceListController',
+			controllerAs : 'controller'
+		});
+		
+		$routeProvider.when('/services/new', {
+			templateUrl : 'app/core/item/item.form.html',
+			controller : 'serviceFormController',
+			controllerAs : 'controller'
+		});
+		
+		$routeProvider.when('/services/:id/edit', {
+			templateUrl : 'app/core/item/item.form.html',
+			controller : 'serviceFormController',
+			controllerAs : 'controller'
+		});
 		
 	});
 })();
