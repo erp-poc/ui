@@ -5,7 +5,7 @@ new sales
 <script type="text/javascript">
 $(".js-data-example-ajax").select2({
   ajax: {
-    url: "/core/contacts/search/findByNameContaining?sort=name",
+    url: "/core/contacts/search/findByNameContainingIgnoreCase?sort=name",
     dataType: 'json',
     delay: 250,
     data: function (params) {
