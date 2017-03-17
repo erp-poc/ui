@@ -21,6 +21,10 @@ $(".js-data-example-ajax").select2({
       // scrolling can be used
       params.page = params.page || 1;
 
+      data._embedded.contacts.forEach(function(contact){
+        contact.id = contact._links.self.href;
+      });
+
       return {
         results: data._embedded.contacts,
         pagination: {
@@ -51,16 +55,16 @@ function formatRepo (repo) {
 
 <form>
   <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-	<select class="js-data-example-ajax form-control" id="exampleInputEmail1">
-	  <option value="3620194" selected="selected">select2/select2</option>
+    <label for="exampleInputEmail1">Client</label>
+	<select class="js-data-example-ajax form-control" ng-model="controller.contact" id="exampleInputEmail1">
 	</select>
+  {{controller.contact}}
   </div>
-  
-    <div class="form-group">
+
+  <div class="form-group">
     <label for="exampleInputPassword1">Password</label>
     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
   </div>
- 
+
   <button type="submit" class="btn btn-default">Submit</button>
 </form>
