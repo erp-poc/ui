@@ -23,7 +23,7 @@ zuul:
   routes:
     core:
       path: /core/**
-      url: http://localhost:8080/
+      url: http://localhost:8082/
     user:
       path: /user/**
       url: http://localhost:9001/auth/user

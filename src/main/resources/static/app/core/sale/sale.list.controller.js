@@ -1,14 +1,15 @@
 (function() {
     'use strict';
 
-    angular.module('hello').controller('saleListController', function($rootScope, $http, $location, $routeParams, contactsService) {
+    angular.module('hello').controller('saleListController', function($rootScope, $http, $location, $routeParams, salesService) {
 
     	var self = this;
     	
-    	self.id = $routeParams.id;
-    	
-    	
     	self.init = function(){
+    		
+    		salesService.list().then(function(response){
+    			self.response = response;
+    		});
     		
     	}
     	
