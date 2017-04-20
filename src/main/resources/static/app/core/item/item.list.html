@@ -5,7 +5,6 @@
 			<th>Cost</th>
 			<th>Price</th>
 			<th>Description</th>
-			<th ng-show="controller.type === 'products'">Quantity</th>
 			<th>Actions</th>
 		</tr>
 	</thead>
@@ -15,7 +14,6 @@
 			<td>{{item.cost}}</td>
 			<td>{{item.price}}</td>
 			<td>{{item.description}}</td>
-			<td ng-show="controller.type === 'products'">{{item.quantity}}</td>
 			<td><a href="{{controller.getEditUrl(item)}}">Edit</a> - <a ng-click="controller.remove(item)">Delete</a></td>
 		</tr>
 	</tbody>
