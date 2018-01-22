@@ -12,7 +12,7 @@ server:
 spring:
   boot:
     admin:
-      url: http://localhost:8081
+      url: http://monitor:8081
   application:
     name: UI
   aop:
@@ -22,17 +22,17 @@ zuul:
   routes:
     core:
       path: /core/**
-      url: http://localhost:8082/
+      url: http://core:8082/
     user:
       path: /user/**
-      url: http://localhost:9001/auth/user
+      url: http://oauth:9001/auth/user
 
 security:
   user:
     password: none
   oauth2:
     client:
-      accessTokenUri: http://localhost:9001/auth/oauth/token
+      accessTokenUri: http://oauth:9001/auth/oauth/token
       userAuthorizationUri: http://localhost:9001/auth/oauth/authorize
       clientId: acme
       clientSecret: acmesecret
